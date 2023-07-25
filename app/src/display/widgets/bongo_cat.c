@@ -25,7 +25,7 @@ LV_IMG_DECLARE(left);
 LV_IMG_DECLARE(right);
 LV_IMG_DECLARE(both);
 
-const void *images[] = {
+const lv_img_dsc_t *images[4] = {
     &none,
     &left,
     &right,
@@ -33,7 +33,7 @@ const void *images[] = {
 };
 
 int zmk_widget_bongo_cat_init(struct zmk_widget_bongo_cat *widget, lv_obj_t *parent) {
-    widget->obj = lv_img_create(parent, NULL);
+    widget->obj = lv_img_create(parent);
     lv_img_set_src(widget->obj, &none);
     current_bongo_state = bongo_state_none;
 
