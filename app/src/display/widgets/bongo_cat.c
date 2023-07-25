@@ -25,12 +25,7 @@ LV_IMG_DECLARE(left);
 LV_IMG_DECLARE(right);
 LV_IMG_DECLARE(both);
 
-const lv_img_dsc_t *images[4] = {
-    &none,
-    &left,
-    &right,
-    &both
-};
+const lv_img_dsc_t *images[4] = {&none, &left, &right, &both};
 
 int zmk_widget_bongo_cat_init(struct zmk_widget_bongo_cat *widget, lv_obj_t *parent) {
     widget->obj = lv_img_create(parent);
@@ -42,9 +37,7 @@ int zmk_widget_bongo_cat_init(struct zmk_widget_bongo_cat *widget, lv_obj_t *par
     return 0;
 }
 
-lv_obj_t *zmk_widget_bongo_cat_obj(struct zmk_widget_bongo_cat *widget) {
-    return widget->obj;
-}
+lv_obj_t *zmk_widget_bongo_cat_obj(struct zmk_widget_bongo_cat *widget) { return widget->obj; }
 
 void set_bongo_state(struct zmk_widget_bongo_cat *widget, struct zmk_position_state_changed *ev) {
     if (ev == NULL) {
