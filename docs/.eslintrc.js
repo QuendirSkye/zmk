@@ -8,7 +8,6 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
     "plugin:mdx/recommended",
     "prettier",
   ],
@@ -20,7 +19,7 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react"],
-  rules: { "react/no-unescaped-entities": "off" },
+  rules: {},
   settings: {
     react: {
       version: "detect",

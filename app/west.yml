@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zephyr
       remote: zmkfirmware
-      revision: v3.5.0+zmk-fixes
+      revision: v3.2.0+zmk-fixes
       clone-depth: 1
       import:
         name-blocklist:
@@ -29,13 +29,6 @@ manifest:
           - openthread
           - edtt
           - trusted-firmware-m
-    - name: nanopb
-      revision: 65cbefb4695bc7af1cb733ced99618afb3586b20
-      path: modules/lib/nanopb
-      remote: zephyrproject-rtos
-    - name: zmk-studio-messages
-      revision: a79267a9661241a6603b6da3d2b3f71e8023a9d9
-      path: modules/msgs/zmk-studio-messages
-      remote: zmkfirmware
+          - sof
   self:
     west-commands: scripts/west-commands.yml
